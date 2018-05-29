@@ -1,0 +1,107 @@
+<div class="row">
+  <div class="only-desktop">
+    <div class="col-md-6 col-sx-6 col-sm-6">
+      <div style="padding-top:40px;">
+        <%= image_tag ('/rocket-building.gif') %>
+      </div>
+    </div>
+    <div class="col-md-6 col-sx-6 col-sm-6">
+      <h3 style="color:#9a9a9a;font-weight:300;">I'll build you a modern rocket ..</h3>
+    <h1 style="line-height: 1.2em;">so you <span style="color:#2e88f3;">confidently</span> can get ready for launch.</h1>
+    </div>
+  </div>
+
+
+  <div class="only-mobile page-title">
+    <div class="col-md-6 col-sx-6 col-sm-6">
+      <center>
+        <h3 style="color:#9a9a9a;font-weight:300;">I'll build you a modern rocket ..</h3>
+        <h1>.. so you <span style="color:#2e88f3;">confidently</span> can get ready for launch.</h1>
+      </center>
+    </div>
+    <div class="col-md-6 col-sx-6 col-sm-6">
+      <div style="padding-top:40px;">
+        <%= image_tag ('/rocket-building.gif') %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="black">
+  <div class="row">
+    <div class="only-desktop">
+      <div class="col-xs-12 col-md-8 col-sm-6">
+        <h3 style="color:#9a9a9a;font-weight:300;padding-top:20px;"><i>Hello there! I am Jonas.</i></h3>
+        <h2 style="color:#9a9a9a;">
+          I am a programmer 
+          <a style="color:#f3992e;" class="typewrite" data-period="2000" data-type='[ "with vision.", "with work ethic.", "with curiosity.", "who doesnt waste time.", "who loves coffee."  ]'>
+            <span class="wrap"></span>
+          </a>
+        </h2>
+        <br />
+        <p style="color:#9a9a9a;font-weight:300;width:60%;">I love building digital marketplaces and listing sites, as well as inventing smart and useful digital tools.<br /><br />Take that with professional experience in design and Facebook marketing plus a general interest for the latest tech.</p>
+        
+      </div>
+      <div class="col-xs-6 col-md-4 col-sm-4" style="width:300px;float:right;">
+        <%= image_tag ('/jonas-black.jpg') %>
+      </div>
+    </div>
+
+
+    <div class="only-mobile page-title">
+      <div class="col-md-6 col-sx-6 col-sm-6">
+      </div>
+      <div class="col-xs-6 col-md-4 col-sm-4" style="width:300px;float:right;">
+        <%= image_tag ('/jonas-black.jpg') %>
+        <h3 style="color:#9a9a9a;font-weight:300;padding-top:40px;">Hello there! I'm Jonas.</h3>
+        <p style="color:#9a9a9a;font-weight:300;">I love building digital marketplaces and listing sites, as well as inventing smart and useful digital tools.<br /><br />Take that with professional experience in design and Facebook marketing plus a general interest for the latest tech.</p>
+        
+        <h2 style="color:#9a9a9a;">
+          I am a programmer 
+          <a style="color:#f3992e;" class="typewrite" data-period="2000" data-type='[ "with vision.", "with work ethic.", "with curiosity.", "who doesnt waste time.", "who loves coffee."  ]'>
+            <span class="wrap"></span>
+          </a>
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="grey">
+  <center>
+  <h1>Recent projects</h1>
+    <div class="row padding-top">
+      <% @projects.each do |project| %>
+        <div class="col-sm-8 col-md-6 padding-top">
+          <%= link_to project.name, project, class: 'white-link' %><div class="white-description"><%= project.desciption %></div>
+          <br />
+          <div class="box">
+            <div class="image-shadow image-container">
+              <%= link_to (image_tag project.image.url(:project)), project %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </center>
+</div>
+
+
+
+
+<div class="grey">
+  <div class="only-desktop">
+    <center>
+      <%= link_to "Let's talk about your idea, shall we?", pages_contact_path, class: 'jp-nav btn btn-primary2' %>
+      </center>
+  </div>
+  <div class="only-mobile">
+    <center>
+      <%= link_to "Let's talk about your idea!", pages_contact_path, class: 'jp-nav btn btn-primary-mobile' %>
+    </center>
+  </div>
+</div>
+</div>
