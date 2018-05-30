@@ -22,7 +22,7 @@
         <div class="card-body">
           <h3 class="card-title"><%= @project.name %></h3>
           <h4>Category: <%= @project.service.name %></h4>
-          <h4><%= link_to "Website" @project.website, target: :blank %></h4>
+          <h4><%= link_to "Website", @project.website, target: :blank %></h4>
           <strong><%= @project.intro %></strong>
           <p class="card-text">
           	<%= simple_format @project.desciption %>
@@ -42,7 +42,7 @@
         <div class="card-body">
           <h3 class="card-title"><%= @project.name %></h3>
           <h4>Category: <%= @project.service.name %></h4>
-          <h4><%= link_to "Website" @project.website, target: :blank %></h4>
+          <h4><%= link_to "Website", @project.website, target: :blank %></h4>
          <strong>:<%= @project.intro %>"</strong>
           <p class="card-text">
           	<%= simple_format @project.desciption %>
