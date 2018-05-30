@@ -41,7 +41,7 @@
         <div class="card-body">
           <h3 class="card-title"><%= @project.name %></h3>
           <h4>Category: <%= @project.service.name %></h4>
-          <strong><%= @project.intro %></strong>
+          <strong>:<%= @project.intro %>"</strong>
           <p class="card-text">
           	<%= simple_format @project.desciption %>
           </p>
@@ -55,7 +55,7 @@
     		<br />
 	    	<% @projects.each do |project| %>
 	       	<%= link_to project.name, project, class: 'white-link' %>
-	       	<div class="white-description"><%= project.intro %></div>
+	       	<div class="white-description">"<%= project.intro %>"</div>
 	        <br />
 	        <div class="box">
 	          <div class="image-shadow image-container">
