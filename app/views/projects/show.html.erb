@@ -19,14 +19,16 @@
     <div class="col-lg-9">
       <div class="card mt-4">
         <%= image_tag @project.image.url %>
-        <div class="card-body">
-          <h3 class="card-title"><%= @project.name %></h3>
-          <h4>Category: <%= @project.service.name %></h4>
-          <h4>Website: <%= @project.website %></h4>
-          <strong><%= @project.intro %></strong>
-          <p class="card-text">
-          	<%= simple_format @project.desciption %>
-          </p>
+        <div class="row">
+          <div class="col-xs-6 col-md-4">
+            <h3 class="card-title"><%= @project.name %></h3>
+            <h4>Category: <%= @project.service.name %></h4>
+            <%= link_to "Website", @project.website, target: :_blank, class: 'btn btn-primary' %>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-8" style="padding-top:50px;">
+            <strong><%= @project.intro %></strong>
+            <%= simple_format @project.desciption %>
+          </div>
         </div>
       </div>
     </div>
