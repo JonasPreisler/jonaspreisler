@@ -89,7 +89,6 @@ img {
 }
 .logo {
     padding: 5px;
-    width: 105px;
     padding-top: 8px;
     padding-left: 15px;
 }
@@ -177,6 +176,38 @@ img {
   color: #fff !important;
 }
 
+.btn-primary3 {
+  color: #1c1c1c;
+  font-size: 26px;
+  text-shadow: 0 0.05rem 0.2rem rgba(0, 0, 0, .5);
+  font-weight: 500;
+  margin-top: 30px;
+  border-radius: 5px;
+  background: linear-gradient(to bottom right, #c9720c, #f6b15e);
+  box-shadow: 2px 4px 6px darken(#c9720c, 1%);
+  transition: all 150ms linear;
+  color: #fff !important;
+}
+
+.btn-primary3:hover {
+  background: #f6b15e;  
+}
+.btn-primary-mobile2 {
+  color: #1c1c1c;
+  font-size: 18px;
+  text-shadow: 0 0.05rem 0.2rem rgba(0, 0, 0, .5);
+  font-weight: 500;
+  margin-top: 50px;
+  border-radius: 5px;
+  background: linear-gradient(to bottom right, #c9720c, #f6b15e);
+  box-shadow: 2px 4px 6px darken(#c9720c, 1%);
+  transition: all 150ms linear;
+  color: #fff !important;
+}
+
+.btn-primary-mobile2:hover {
+  background: #f6b15e;  
+}
 .btn-primary-mobile {
   color: #1c1c1c;
   font-size: 18px;
