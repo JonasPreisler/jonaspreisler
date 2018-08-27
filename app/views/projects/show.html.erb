@@ -1,73 +1,56 @@
-<div class="container only-desktop">
-  <div class="row">
-    <div class="col-lg-3">
-    	<center>
-    		<h2>Other projects</h2>
-    		<br />
-	    	<% @projects.each do |project| %>
-	       	<%= link_to project.name, project, class: 'white-link' %>
-	       	<div class="white-description"><%= project.intro %></div>
-	        <br />
-	        <div class="box">
-	          <div class="image-shadow image-container">
-	            <%= image_tag project.image.url(:project_view) %>
-	          </div>
-	        </div>
-		  	<% end %>
-		  </center>
-    </div>
-    <div class="col-lg-9">
-      <div class="card mt-4">
-        <%= image_tag @project.image.url %>
-        <div class="row">
-          <div class="col-xs-6 col-md-4">
-            <h3 class="card-title"><%= @project.name %></h3>
-            <h4>Category: <%= @project.service.name %></h4>
-            <%= link_to "Website", @project.website, target: :_blank, class: 'btn btn-primary' %>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-8" style="padding-top:50px;">
-            <strong><%= @project.intro %></strong>
-            <%= simple_format @project.desciption %>
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="container-fluid">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <%= link_to root_path do %>
+      <%= image_tag ('/logo1.png'), class: 'logo' %>
+    <% end %>
+
   </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <% unless controller_name == "pages" %>
+      <ul class="nav navbar-nav navbar-right">
+      <li><a href="https://digitalspartan.com" target="_blank" class="jp-nav">Blog</a></li>
+      </ul>
+    <% end %>
+  </div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+<div class="container only-desktop" style="width: 70%;padding-top: 20px;">
+  <div class="row">
+    <div class="col-xs-6 col-md-6">
+      <%= image_tag @project.image.url %>
+    </div>
+    <div class="col-xs-6 col-md-6">
+      <h3 class="card-title"><%= @project.name %></h3>
+      <h4>Category: <%= @project.service.name %></h4><br />
+      <%= link_to "Website", @project.website, target: :_blank, class: 'website' %>
+    </div>
+
+  </div><br /><br />
+  <strong><%= @project.intro %></strong><br />
+  <%= simple_format @project.desciption %>
 </div>
 
 
 <div class="container only-mobile">
   <div class="row">
     <div class="col-lg-9">
-      <div class="card mt-4">
+      <div class="card mt-4"><br /><br />
         <%= image_tag @project.image.url(:project_view) %>
         <div class="card-body">
-          <h3 class="card-title"><%= @project.name %></h3>
-          <h4>Category: <%= @project.service.name %></h4>
-          <h4>Website: <%= @project.website %></h4>
-         <strong>:<%= @project.intro %>"</strong>
-          <p class="card-text">
-          	<%= simple_format @project.desciption %>
-          </p>
+          <center>
+            <h3 class="card-title"><%= @project.name %></h3>
+            <h4>Category: <%= @project.service.name %></h4><br />
+            <%= link_to "Website", @project.website, target: :_blank, class: 'website' %><br /><br /><br />
+           <strong>:<%= @project.intro %>"</strong><br />
+            <p class="card-text">
+            	<%= simple_format @project.desciption %>
+            </p>
+          </center>
         </div>
       </div>
     </div>
     <hr>
-		<div class="col-lg-3">
-    	<center>
-    		<h2>Other projects</h2>
-    		<br />
-	    	<% @projects.each do |project| %>
-	       	<%= link_to project.name, project, class: 'white-link' %>
-	       	<div class="white-description">"<%= project.intro %>"</div>
-	        <br />
-	        <div class="box">
-	          <div class="image-shadow image-container">
-	            <%= image_tag project.image.url(:project_view) %>
-	          </div>
-	        </div>
-		  	<% end %>
-		  </center>
-    </div>
   </div>
 </div>

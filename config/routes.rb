@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root 'projects#index', to: 'projects/index'
   get 'pages/contact', to: 'pages#contact'
   get 'pages/chat', to: 'pages#chat'
+  get '/ejendom', to: 'pages#ejendom'
 end

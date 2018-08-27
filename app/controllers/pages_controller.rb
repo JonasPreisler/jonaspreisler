@@ -4,5 +4,7 @@ class PagesController < ApplicationController
   end
   def chat
   end
+  def ejendom
+  end
 
 end

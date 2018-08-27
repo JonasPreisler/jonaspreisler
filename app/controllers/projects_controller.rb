@@ -11,6 +11,10 @@ class ProjectsController < ApplicationController
   # GET /projects/1.json
   def show
     @projects = Project.all.order('created_at DESC')
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   # GET /projects/new

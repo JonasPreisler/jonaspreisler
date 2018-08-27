@@ -1,4 +1,120 @@
-<div class="row" style="margin-top: 70px;">
+<nav class="navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to root_path do %>
+        <%= image_tag ('/logowhite.png'), class: 'logo' %>
+      <% end %>
+
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <% unless controller_name == "pages" %>
+        <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://digitalspartan.com" target="_blank" class="jp-nav">Blog</a></li>
+        </ul>
+      <% end %>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="row angle" style="background:#444">
+  <div class="only-desktop">
+    <div class="col-md-6 col-sx-6 col-sm-6">
+      <div class="padding headline">
+        You <span style="color:#f3992e">sell</span> it.<br /> I <span style="color:#f3992e">build</span> it. <span style="font-size:18px;font-weight:300;">... deal?</span>
+      </div>
+    </div>
+    <center>
+      <div class="col-md-6 col-sx-6 col-sm-6" style="padding-top: 100px;">
+      <%= link_to "Pop me a message", pages_contact_path,  class: 'btn btn-primary-mobile2' %>
+      </div>
+    </center>
+  </div>
+  <div class="only-mobile">
+    <center>
+      <div class="padding-mobile headline-mobile">
+        You <span style="color:#f3992e">sell</span> it.<br /> I <span style="color:#f3992e">build</span> it. <br /><span style="font-size:18px;font-weight:300;">... deal?</span>
+      </div>
+    <div style="padding-bottom: 50px;" >
+      <%= link_to "Pop me a message", pages_contact_path,  class: 'btn btn-primary-mobile2' %>
+    </div>
+    </center>
+  </div>
+</div>
+
+
+
+<div class="grey">
+  <center>
+  <h1>Recent projects</h1>
+    <div class="row padding-top">
+      <% @projects.each do |project| %>
+        <div class="col-sm-8 col-md-6 padding-top">
+          <div class="box">
+            <div class="image-container">
+              <%= link_to (image_tag project.image.url(:project)), project %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </center>
+</div>
+
+
+<div class="only-desktop">
+  <div class="black">
+    <div class="row">
+      <div class="col-md-8 col-sm-6">
+        <h3 style="color:#9a9a9a;font-weight:300;padding-top:20px;"><i>Hello there! I am Jonas.</i></h3>
+        <h2 style="color:#9a9a9a;">
+          I am a developer 
+          <a style="color:#f3992e;" class="typewrite" data-period="2000" data-type='[ "with vision.", "with work ethic.", "with curiosity.", "who doesnt waste time.", "who loves coffee."  ]'>
+            <span class="wrap"></span>
+          </a>
+        </h2>
+        <br />
+        <p style="color:#9a9a9a;font-weight:300;width:60%;background: #1c1c1c">I love building digital marketplaces and listing sites, as well as inventing smart and useful digital tools.<br /><br />Take that with professional experience in design and Facebook marketing plus a general interest for the latest tech.</p>
+        
+      </div>
+      <div class="col-md-4 col-sm-4" style="width:300px;float:right;">
+        <%= image_tag ('/jonas-black.jpg') %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="only-mobile">
+  <div class="black-mobile">
+    <div class="black-mobile-margin">
+      <div class="row">
+        <div class="col-md-4 col-sm-4" style="width:300px;float:right;">
+          <%= image_tag ('/jonas-black.jpg') %>
+          <h3 style="color:#9a9a9a;font-weight:300;padding-top:40px;">Hello there! I'm Jonas.</h3>
+          <p style="color:#9a9a9a;font-weight:300;background: #1c1c1c">I love building digital marketplaces and listing sites, as well as inventing smart and useful digital tools.<br /><br />Take that with professional experience in design and Facebook marketing plus a general interest for the latest tech.</p>
+          
+          <h2 style="color:#9a9a9a;">
+            I am a developer 
+            <a style="color:#f3992e;" class="typewrite" data-period="2000" data-type='[ "with vision.", "with work ethic.", "with curiosity.", "who doesnt waste time.", "who loves coffee."  ]'>
+              <span class="wrap"></span>
+            </a>
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row" style=";background:#fff">
   <div class="only-desktop">
     <div class="col-md-6 col-sx-6 col-sm-6">
       <div style="padding-top:40px;">
@@ -6,7 +122,7 @@
       </div>
     </div>
     <div class="col-md-6 col-sx-6 col-sm-6">
-    <h1 style="line-height: 1.2em;">Prepare your launch with <span style="color:#2e88f3;">confidence</span></h1>
+    <h1 style="line-height: 1.2em;margin-top: 60px;">Prepare your launch with <span style="color:#2e88f3;">confidence</span></h1>
       <h3 style="color:#9a9a9a;font-weight:300;">.. while I build your digital machinery.</h3>
       <%= link_to "Pop me a message", pages_contact_path,  class: 'btn btn-primary3' %>
     </div>
@@ -31,77 +147,11 @@
 
 
 
-<div class="only-desktop">
-  <div class="black">
-    <div class="row">
-      <div class="col-md-8 col-sm-6">
-        <h3 style="color:#9a9a9a;font-weight:300;padding-top:20px;"><i>Hello there! I am Jonas.</i></h3>
-        <h2 style="color:#9a9a9a;">
-          I am a developer 
-          <a style="color:#f3992e;" class="typewrite" data-period="2000" data-type='[ "with vision.", "with work ethic.", "with curiosity.", "who doesnt waste time.", "who loves coffee."  ]'>
-            <span class="wrap"></span>
-          </a>
-        </h2>
-        <br />
-        <p style="color:#9a9a9a;font-weight:300;width:60%;">I love building digital marketplaces and listing sites, as well as inventing smart and useful digital tools.<br /><br />Take that with professional experience in design and Facebook marketing plus a general interest for the latest tech.</p>
-        
-      </div>
-      <div class="col-md-4 col-sm-4" style="width:300px;float:right;">
-        <%= image_tag ('/jonas-black.jpg') %>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="only-mobile">
-  <div class="black-mobile">
-    <div class="black-mobile-margin">
-      <div class="row">
-        <div class="col-md-4 col-sm-4" style="width:300px;float:right;">
-          <%= image_tag ('/jonas-black.jpg') %>
-          <h3 style="color:#9a9a9a;font-weight:300;padding-top:40px;">Hello there! I'm Jonas.</h3>
-          <p style="color:#9a9a9a;font-weight:300;">I love building digital marketplaces and listing sites, as well as inventing smart and useful digital tools.<br /><br />Take that with professional experience in design and Facebook marketing plus a general interest for the latest tech.</p>
-          
-          <h2 style="color:#9a9a9a;">
-            I am a developer 
-            <a style="color:#f3992e;" class="typewrite" data-period="2000" data-type='[ "with vision.", "with work ethic.", "with curiosity.", "who doesnt waste time.", "who loves coffee."  ]'>
-              <span class="wrap"></span>
-            </a>
-          </h2>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="grey">
-  <center>
-  <h1>Recent projects</h1>
-    <div class="row padding-top">
-      <% @projects.each do |project| %>
-        <div class="col-sm-8 col-md-6 padding-top">
-          <%= link_to project.name, project, class: 'white-link' %><div class="white-description"><%= project.intro %></div>
-          <br />
-          <div class="box">
-            <div class="image-shadow image-container">
-              <%= link_to (image_tag project.image.url(:project)), project %>
-            </div>
-          </div>
-        </div>
-      <% end %>
-    </div>
-  </center>
-</div>
-
-
-
-
 <div class="grey">
   <div class="only-desktop">
     <center>
       <%= link_to "Let's talk about your idea, shall we?", pages_contact_path, class: 'jp-nav btn btn-primary2' %>
-      </center>
+    </center>
   </div>
   <div class="only-mobile">
     <center>
