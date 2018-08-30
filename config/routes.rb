@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get 'pages/contact', to: 'pages#contact'
   get 'pages/chat', to: 'pages#chat'
   get '/ejendom', to: 'pages#ejendom'
+  resources :urls, only: [:new, :create]
+  get '/bitly', to: "urls#new"
 end
