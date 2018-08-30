@@ -15,7 +15,7 @@ json.messages do
 				json.image_aspect_ratio "horizontal"
 				json.elements do
 					json.title "Læg i kurv"
-					json.image_url "#{image_tag ('/kurv.png')}"
+					json.image_url "https://www.jonaspreisler.com/kurv.png"
 					json.subtitle "Læg i kurv"
 					json.buttons do
 						json.array! [*1] do
