@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get '/ejendom', to: 'pages#ejendom'
   resources :urls, only: [:new, :create]
   get '/bitly', to: "urls#new"
+  get '/urls', to: "urls#new"
+  resources :urls
 end
