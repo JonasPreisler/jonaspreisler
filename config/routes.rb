@@ -13,6 +13,6 @@ Rails.application.routes.draw do
     resources :link_to_shortens
     get '/bitly', to: "urls#new"
   end
-  post "link_to_shorten" => "urls#new", :via => [ :post]
+  post "link_to_shorten/:id" => "urls#new", :via => [ :post]
 
 end
