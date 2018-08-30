@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_30_053126) do
+ActiveRecord::Schema.define(version: 2018_08_30_073150) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "link_to_shortens", force: :cascade do |t|
+    t.integer "product_id"
+    t.string "color"
+    t.string "size"
+    t.integer "amount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "projects", force: :cascade do |t|
     t.string "name"
@@ -24,6 +33,8 @@ ActiveRecord::Schema.define(version: 2018_05_30_053126) do
     t.integer "service_id"
     t.text "intro"
     t.string "website"
+    t.string "youtube_file"
+    t.string "video"
   end
 
   create_table "services", force: :cascade do |t|

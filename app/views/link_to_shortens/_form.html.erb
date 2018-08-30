@@ -1,0 +1,37 @@
+<%= form_with(model: link_to_shorten, local: true) do |form| %>
+  <% if link_to_shorten.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(link_to_shorten.errors.count, "error") %> prohibited this link_to_shorten from being saved:</h2>
+
+      <ul>
+      <% link_to_shorten.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :product_id %>
+    <%= form.number_field :product_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :color %>
+    <%= form.text_field :color %>
+  </div>
+
+  <div class="field">
+    <%= form.label :size %>
+    <%= form.text_field :size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount %>
+    <%= form.number_field :amount %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :link_to_shortens
   resources :services
   resources :projects
   root 'projects#index', to: 'projects/index'
@@ -7,7 +8,8 @@ Rails.application.routes.draw do
   get '/ejendom', to: 'pages#ejendom'
   resources :urls, only: [:new, :create]
   get '/bitly', to: "urls#new"
-  namespace 'api' do
+  namespace 'api', defaults: { format: :json } do
+    resources :link_to_shortens
     get '/bitly', to: "urls#new"
   end
 
