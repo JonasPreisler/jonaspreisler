@@ -1,5 +1,8 @@
 module Api
   class UrlsController < ApplicationController
+    def index
+      @url = Url.last
+    end
     def new
     end
 
@@ -10,4 +13,14 @@ module Api
       end
     end
   end
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def url
+      @url = Url.find(params[:id])
+    end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def url_params
+      params.permit(:link)
+    end
 end

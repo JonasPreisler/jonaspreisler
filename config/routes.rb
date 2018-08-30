@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/urls', to: 'urls#show'
   resources :link_to_shortens
   resources :urls
   resources :services
