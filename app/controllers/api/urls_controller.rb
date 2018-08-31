@@ -17,7 +17,7 @@ class Api::UrlsController < ApplicationController
       @url = client.shorten(params[:url])
       render json: {
        "messages": [
-         {"text": "Vælg tidspunkt hér"}
+         {"text": "@url.short_url"}
         ]
       }
     end
