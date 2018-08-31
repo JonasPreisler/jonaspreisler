@@ -9,7 +9,7 @@ json.messages do
 					json.array! [*1] do
 						json.title "Læg i kurv"
 						json.image_url "https://www.jonaspreisler.com/kurv.png"
-						json.subtitle "Læg i kurv"
+						json.subtitle "{{produkt_navn}} Læg i kurv"
 						json.buttons do
 							json.array! [*1] do
 								json.type "web_url"
