@@ -22,19 +22,12 @@ class Api::LinkToShortensController < ApplicationController
 
     respond_to do |format|
       if @link_to_shorten.save
-      render json: {
-      "message":{
-          "text": "Here is a quick reply!",
-          "quick_replies":[
-            {
-              "content_type":"text",
-              "title":"jaja",
-              "image_url":"https://realmealrevolution.com/wp-content/uploads/2018/07/green.jpg",
-              "payload":"<DEVELOPER_DEFINED_PAYLOAD>"
-            }
-          ]
-        }
-      }
+        format.html { redirect_to @link_to_shorten, notice: 'Link to shorten was successfully created.' }
+        format.json { render :show, status: :created, location: @link_to_shorten }
+      else
+        format.html { render :new }
+        format.json { render json: @link_to_shorten.errors, status: :unprocessable_entity }
+      end
     end
   end
 
