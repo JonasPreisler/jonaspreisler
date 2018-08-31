@@ -15,6 +15,11 @@ class Api::UrlsController < ApplicationController
     if !params[:url].blank?
       client = Bitly.client
       @url = client.shorten(params[:url])
+      render json: {
+       "messages": [
+         {"text": "Vælg tidspunkt hér"}
+        ]
+      }
     end
   end
   private
