@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get '/urls', to: 'urls#show'
   resources :link_to_shortens
   resources :urls
   resources :services
@@ -12,7 +11,7 @@ Rails.application.routes.draw do
   get '/bitly', to: "urls#new"
   namespace 'api', defaults: { format: :json } do
     resources :link_to_shortens
-    get '/bitly', to: "urls#new"
+    resources :urls
   end
   post "link_to_shorten/:id" => "urls#new", :via => [ :post]
 

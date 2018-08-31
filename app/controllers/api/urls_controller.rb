@@ -6,6 +6,10 @@ module Api
     def new
     end
 
+    def show
+      render :show
+    end
+
     def create
       if !params[:url].blank?
         client = Bitly.client
@@ -21,6 +25,6 @@ module Api
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def url_params
-      params.permit(:link)
+      params.permit(:url)
     end
 end
