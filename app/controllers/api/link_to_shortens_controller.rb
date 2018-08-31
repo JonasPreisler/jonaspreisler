@@ -19,6 +19,16 @@ class Api::LinkToShortensController < ApplicationController
 
   def create
     @link_to_shorten = LinkToShorten.new(link_to_shorten_params)
+
+    respond_to do |format|
+      if @link_to_shorten.save
+        format.html { redirect_to @link_to_shorten, notice: 'Link to shorten was successfully created.' }
+        format.json { render :show, status: :created, location: @link_to_shorten }
+      else
+        format.html { render :new }
+        format.json { render json: @link_to_shorten.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def update
