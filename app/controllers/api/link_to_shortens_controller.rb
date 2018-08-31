@@ -24,7 +24,17 @@ class Api::LinkToShortensController < ApplicationController
       if @link_to_shorten.save
         render json: {
          "messages": [
-           {"text": "Your long link: http://jones.webshop8.dk/shop/showbasket.html?BasketLink=1&AddMultiple=1&ProductID=|#{@link_to_shorten.product_id}&Amount=|1&VariantGroups=|#{'Farve' if @link_to_shorten.color?}#{'%3BStørrelser' if @link_to_shorten.size?}&Variants=|#{@link_to_shorten.color}#{'%3B' if @link_to_shorten.size?}#{@link_to_shorten.size}"}
+           {"text": "Your long link: http://jones.webshop8.dk/shop/showbasket.html?BasketLink=1&AddMultiple=1&ProductID=|#{@link_to_shorten.product_id}&Amount=|1&VariantGroups=|#{'Farve' if @link_to_shorten.color?}#{'%3BStørrelser' if @link_to_shorten.size?}&Variants=|#{@link_to_shorten.color}#{'%3B' if @link_to_shorten.size?}#{@link_to_shorten.size}"},
+            "quick_replies":[
+            {
+              "content_type":"text",
+              "title":"Search",
+              "payload":"<POSTBACK_PAYLOAD>",
+              "image_url":"https://d2d00szk9na1qq.cloudfront.net/Product/0253a8ef-822e-4033-b9fa-416eae53f379/Images/Large_UG-775.jpg"
+            },
+            {
+              "content_type":"location"
+            }
           ]
         }
       else
