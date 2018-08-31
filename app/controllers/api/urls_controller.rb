@@ -15,7 +15,15 @@ class Api::UrlsController < ApplicationController
     if !params[:url].blank?
       client = Bitly.client
       @url = client.shorten(params[:url])
-      render :show
+      respond_to do |format|
+        if @url.save
+          format.html { redirect_to @url, notice: 'url to shorten was successfully created.' }
+          format.json { render :show, status: :created, location: @url }
+        else
+          format.html { render :new }
+          format.json { render json: @url.errors, status: :unprocessable_entity }
+        end
+      end
     end
   end
   private
