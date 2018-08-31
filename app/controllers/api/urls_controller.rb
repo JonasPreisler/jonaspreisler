@@ -22,8 +22,7 @@ class Api::UrlsController < ApplicationController
             {
               "content_type":"text",
               "title":"jaja",
-              "image_url":"https://realmealrevolution.com/wp-content/uploads/2018/07/green.jpg",
-              "payload":"<DEVELOPER_DEFINED_PAYLOAD>"
+              "image_url":"https://realmealrevolution.com/wp-content/uploads/2018/07/green.jpg"
             }
           ]
         }
