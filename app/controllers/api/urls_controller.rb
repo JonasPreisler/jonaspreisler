@@ -1,20 +1,20 @@
-module Api
-  class UrlsController < ApplicationController
-    def index
-      @url = Url.last
-    end
-    def new
-    end
+class Api::UrlsController < ApplicationController
+  before_action :set_link_to_shorten, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token
+  def index
+    @url = Url.last
+  end
+  def new
+  end
 
-    def show
-      render :show
-    end
+  def show
+    render :show
+  end
 
-    def create
-      if !params[:url].blank?
-        client = Bitly.client
-        @url = client.shorten(params[:url])
-      end
+  def create
+    if !params[:url].blank?
+      client = Bitly.client
+      @url = client.shorten(params[:url])
     end
   end
   private
