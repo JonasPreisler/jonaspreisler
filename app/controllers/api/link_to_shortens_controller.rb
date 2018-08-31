@@ -22,8 +22,11 @@ class Api::LinkToShortensController < ApplicationController
 
     respond_to do |format|
       if @link_to_shorten.save
-        format.html { redirect_to @link_to_shorten, notice: 'Link to shorten was successfully created.' }
-        format.json { render :show, status: :created, location: @link_to_shorten }
+        render json: {
+         "messages": [
+           {"text": "Your link: http://jones.webshop8.dk/shop/showbasket.html?BasketLink=1&AddMultiple=1&ProductID=|#{@link_to_shorten.product_id}&Amount=|1&VariantGroups=|#{'Farve' if @link_to_shorten.color?}#{'%3BStørrelser' if @link_to_shorten.size?}&Variants=|#{@link_to_shorten.color}#{'%3B' if @link_to_shorten.size?}#{@link_to_shorten.size}"}
+          ]
+        }
       else
         format.html { render :new }
         format.json { render json: @link_to_shorten.errors, status: :unprocessable_entity }
