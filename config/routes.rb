@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :misschilis
   resources :link_to_shortens
   resources :urls
   resources :services

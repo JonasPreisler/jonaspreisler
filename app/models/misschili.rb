@@ -1,0 +1,2 @@
+class Misschili < ApplicationRecord
+end
