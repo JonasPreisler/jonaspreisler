@@ -22,6 +22,7 @@ class Api::MisschilisController < ApplicationController
         format.html { render :new }
         format.json { render json: @misschili.errors, status: :unprocessable_entity }
       end
+    end
   end
   private
     # Use callbacks to share common setup or constraints between actions.
