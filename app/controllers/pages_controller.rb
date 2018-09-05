@@ -6,5 +6,7 @@ class PagesController < ApplicationController
   end
   def ejendom
   end
+  def privacypolicy
+  end
 
 end

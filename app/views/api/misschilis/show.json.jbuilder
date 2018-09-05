@@ -3,6 +3,6 @@ json.set_attributes do
 end
 json.messages do
 	json.array! [*1] do
-		json.text  "It worked!"
+		json.text  "stockCount"
 	end
 end
