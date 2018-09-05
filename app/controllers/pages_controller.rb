@@ -8,5 +8,7 @@ class PagesController < ApplicationController
   end
   def privacypolicy
   end
+  def termsofservice
+  end
 
 end
