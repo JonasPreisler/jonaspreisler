@@ -28,6 +28,8 @@ gem 'mini_magick', '~> 4.8'
 gem 'pg'
 gem 'fog'
 gem 'bitly', '~> 0.9.0'
+gem 'omniauth-facebook'
+gem "koala"
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
