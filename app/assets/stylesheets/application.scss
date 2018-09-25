@@ -18,21 +18,22 @@
 @import "bootstrap";
 
 
-
-@font-face {
-    font-family: 'poppins';
-    src: asset_url('font/Poppins-Light.otf'), ('font/Poppins-Bold.otf'), ('font/Poppins-Black.otf');
-}
-
-
 body, p {
-	font-weight: 300;
-	font-family: Poppins-Light, poppins;
-	background: #f4f3f3;
-	font-size: 20px;
+    font-family: 'Helvetica Neue';
+    src: url('HelveticaNeue-Roman.woff2') format('woff2'),
+        url('HelveticaNeue-Roman.woff') format('woff'),
+        url('HelveticaNeue-Roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
 }
 
 h1 {
-  font-size: 34px;
-  font-family: poppins black, poppins;
+    font-family: 'Helvetica Neue';
+    src: url('HelveticaNeue-Black.woff2') format('woff2'),
+        url('HelveticaNeue-Black.woff') format('woff'),
+        url('HelveticaNeue-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-size: 34px
 }
+
