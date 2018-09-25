@@ -51,22 +51,19 @@
 </div>
 
 
-
-<center>
-  <div class="white">
+<div class="grey">
+  <center>
     <h1>Who I'm building for in 2018</h1>
     <div class="row" style="padding-top:40px">
-      <div class="col-xs-6">
+      <div class="col-md-6">
       <%= image_tag "/partner1.png", class: 'partner' %>
       </div>
-      <div class="col-xs-6">
+      <div class="col-md-6">
       <%= image_tag "/partner2.png", class: 'partner' %>
       </div>
     </div>
-  </div>
-  <div class="grey">
 
-  <h1>Recent projects</h1>
+  <h1 style="padding-top: 50px">Recent projects</h1>
     <div class="row padding-top">
       <% @projects.each do |project| %>
         <div class="col-sm-8 col-md-6 padding-top">
@@ -78,8 +75,9 @@
         </div>
       <% end %>
     </div>
-  </div>
-</center>
+  </center>
+</div>
+
 
 
 <div class="only-desktop">

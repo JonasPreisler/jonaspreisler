@@ -29,11 +29,7 @@ body, p {
 }
 
 h1 {
-    font-family: 'Helvetica Neue';
-    src: url('HelveticaNeue-Black.woff2') format('woff2'),
-        url('HelveticaNeue-Black.woff') format('woff'),
-        url('HelveticaNeue-Black.ttf') format('truetype');
-    font-weight: 900;
-    font-size: 34px
+  font-size: 30px;
+  font-family: poppins black, poppins;
+  color: #323232
 }
-
