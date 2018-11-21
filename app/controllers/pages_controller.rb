@@ -2,7 +2,7 @@ class PagesController < ApplicationController
 
   def contact
   end
-  def chat
+  def messenger
   end
   def ejendom
   end

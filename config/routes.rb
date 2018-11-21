@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'pages/contact', to: 'pages#contact'
   get 'pages/privacy-policy', to: 'pages#privacypolicy'
   get 'pages/terms-of-service', to: 'pages#termsofservice'
-  get 'pages/chat', to: 'pages#chat'
+  get 'messenger', to: 'pages#messenger'
   get '/ejendom', to: 'pages#ejendom'
   resources :urls, only: [:new, :create]
   get '/bitly', to: "urls#new"
