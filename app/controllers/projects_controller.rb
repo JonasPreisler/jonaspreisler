@@ -5,6 +5,7 @@ class ProjectsController < ApplicationController
   # GET /projects.json
   def index
     @projects = Project.all.order('created_at DESC')
+    @featured = Project.all.order('created_at DESC').limit(2)
   end
 
   # GET /projects/1

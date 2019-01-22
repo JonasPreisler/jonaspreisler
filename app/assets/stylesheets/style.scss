@@ -4,6 +4,7 @@ body {
 h3 {
     text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, .2);
 }
+a { color: #1c1c1c !important; text-decoration: none !important; }
 .image-container {
     position: relative;
     text-align: center;
@@ -78,12 +79,6 @@ img {
 .box:hover::after {
     opacity: 1;
 }
-.logo {
-    padding: 5px;
-    padding-top: 15px;
-    padding-left: 15px;
-    width: 260px;
-}
 .navbar-default {
     background: #444 !important;
     border: none !important;
@@ -120,9 +115,6 @@ img {
 .page-title {
     padding-left: 50px;
     padding-right: 50px;
-}
-.padding-top {
-  padding-top: 30px;
 }
 .navbar-default .navbar-nav > li > a {
   padding-top: 8px;
@@ -191,23 +183,7 @@ img {
 }
 
 .btn-primary3:hover {
-  background: #f6b15e;  
-}
-.btn-primary-mobile2 {
-  color: #1c1c1c;
-  font-size: 14px;
-  text-shadow: 0 0.05rem 0.2rem rgba(0, 0, 0, .5);
-  font-weight: 500;
-  margin-top: 50px;
-  border-radius: 5px;
-  background: linear-gradient(to bottom right, #c9720c, #f6b15e) !important;
-  box-shadow: 2px 4px 6px darken(#c9720c, 1%);
-  transition: all 150ms linear;
-  color: #fff !important;
-}
-
-.btn-primary-mobile2:hover {
-opacity: 0.8;
+  background: #f6b15e;
 }
 .btn-primary-mobile {
   color: #1c1c1c;
@@ -252,14 +228,6 @@ opacity: 0.8;
 .padding-mobile {
   padding-top: 50px;
 }
-.headline {
-  font-size: 70px;
-  color: #f3f2f2;
-  font-weight: 700;
-  font-family: poppins bold, poppins;
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
 .headline-mobile {
   font-size: 40px;
   color: #f3f2f2;
@@ -287,3 +255,167 @@ opacity: 0.8;
 .partner {
   width: 180px
 }
+
+
+
+/* ---------------------------------------------------
+     PROJECTS INDEX
+----------------------------------------------------- */
+
+.rotate {
+  transform: rotate(3deg);
+}
+.btn-call-to-action {
+  border-radius: 3px;
+  padding: 20px;
+  background: #1c1c1c;
+  color: #f3f2f2 !important;
+  position: relative;
+  transition: .3s;
+  &:hover {
+    box-shadow: 4px 4px #c3c2c2;
+  }
+}
+.sb:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid #1c1c1c;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #1c1c1c;
+  border-bottom: 10px solid transparent;
+  left: 19px;
+  bottom: -19px;
+}
+
+.slanted {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+}
+.headline {
+  color: #1c1c1c;
+  transform: rotate(-1deg);
+}
+.header-image {
+  position: relative;
+  width:100%;
+  height:100%;
+  background: url('/bg.jpg') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+.row {
+  margin: 0 !important;
+}
+#particles-js {
+   width: 100%;
+   height: 100%;
+   color: #1c1c1c;
+   position: absolute;
+}
+.red {
+  background: #f3372e;
+  padding: 80px;
+}
+
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.header {
+  position: relative;
+  width:100%;
+  height:100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  .layer {
+    background: linear-gradient(to bottom right, rgba(243, 153, 46, .2), rgba(243, 55, 46, .6));
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.95;
+  }
+  .col-sm-6, .col-md-6 {
+    padding: 0;
+  }
+}
+
+.header-2 {
+  position: relative;
+  background: url(/bg.jpg) no-repeat center center;
+  width:100%;
+  height:100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  .layer {
+    background: linear-gradient(to bottom right, rgba(170, 107, 32, 0.2), rgba(170, 38, 32, 0.6));
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .col-sm-6, .col-md-6 {
+    padding: 0;
+  }
+}
+.featured {
+  transition: .3s;
+  h2 {
+    color: #fff;
+  }
+  p {
+    color: #fff
+  }
+  &:hover {
+    box-shadow: inset 0 0 50px 20px rgba(0, 0, 0, 0.4);
+  }
+}
+.sub-heading {
+  transform: rotate(3deg);
+  color: #fff;
+  font-size: 4vw;
+}
+#particles-js {
+  height: 50%;
+  bottom: 0;
+}
+.logo-landing {
+  padding: 15px;
+  .logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+  }
+  .logo-sub {
+    color: #fff;
+    letter-spacing: 0.4em;
+    font-size: 12px;
+    font-weight: 300;
+  }
+}
+
+.padding-top {
+  padding-top: 10vw;
+}
+/* ---------------------------------------------------
+    END OF PROJECTS INDEX
+----------------------------------------------------- */

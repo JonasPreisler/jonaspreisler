@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.3.3'
+ruby '2.5.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
@@ -27,10 +27,12 @@ gem 'carrierwave', '~> 1.0'
 gem 'mini_magick', '~> 4.8'
 gem 'pg'
 gem 'fog'
-gem 'bitly', '~> 0.9.0'
 gem 'omniauth-facebook'
 gem "koala"
 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-particles.js'
+end
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password

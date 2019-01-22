@@ -1,69 +1,68 @@
-<nav class="navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <%= link_to root_path do %>
-        <%= image_tag ('/logowhite.png'), class: 'logo' %>
-      <% end %>
+<script>
+  AOS.init();
+</script>
 
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <% unless controller_name == "pages" %>
-        <ul class="nav navbar-nav navbar-right">
-        <li><a href="https://digitalspartan.com" target="_blank" class="jp-nav" style="color:#f3f2f2">Blog</a></li>
-        </ul>
-      <% end %>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
-<div class="row angle" style="background:#444">
-  <div class="only-desktop">
-    <div class="col-md-6 col-sx-6 col-sm-6">
-      <div class="padding headline">
-        You <span style="color:#f3992e">sell</span> it.<br /> I <span style="color:#f3992e">build</span> it. <span style="font-size:18px;font-weight:300;"></span>
-      </div>
-    </div>
-    <center>
-      <div class="col-md-6 col-sx-6 col-sm-6" style="padding-top: 100px;">
-      <%= link_to "Pop me a message", pages_contact_path,  class: 'btn btn-primary-mobile2' %>
-      </div>
+<div class="header-2">
+  <div class="layer">
+    <div class="logo-landing">
+      <center>
+      <h2 style="color: #fff">TEKUILA</h2>
+      <div class="logo-sub">digital agency</div>
     </center>
+    </div>
+    <div class="headline padding-top">
+      <center>
+        <h1 style="color:#f3f2f2"><div style="padding-bottom: 10px;" data-aos="fade-up">We turn ideas into</div>
+          <div style="transform: rotate(3deg);" data-aos="fade-up">
+            <span style="background:linear-gradient(to right, #205faa, #167276);padding: 5px; border-radius: 3px;color:#f3f2f2;padding-left:15px;box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);">
+              digital products.
+            </span>
+          </div>
+        </h1>
+        <div class="sub-heading">
+           SaaS, Chatbots, Marketplaces, Ecommerce
+        </div>
+      </center>
+    </div>
+    <div id="particles-js"></div>
   </div>
-  <div class="only-mobile">
+</div>
+
+
+
+<div class="row header">
+  <div class="only-desktop">
+    <% @projects.each do |f| %>
+      <%= link_to project_path(f), class: 'col-md-6 col-sx-6 col-sm-6' do %>
+        <div class="width: 100%;">
+          <div class="featured" style="background-image: url('<%= f.image.url(:project_view) %>');background-size: 100%">
+            <div class="headline padding" data-aos="fade-up" data-aos-duration="100">
+              <h2><%= f.name %></h2>
+               <p><%= f.desciption %></p> 
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="only-mobile flexbox">
     <center>
       <div class="padding-mobile headline-mobile">
         You <span style="color:#f3992e">sell</span> it.<br /> I <span style="color:#f3992e">build</span> it. <br /><span style="font-size:18px;font-weight:300;"></span>
       </div>
-    <div style="padding-bottom: 50px;" >
-      <%= link_to "Pop me a message", pages_contact_path,  class: 'btn btn-primary-mobile2' %>
+    <div style="padding-bottom: 50px;" class="rotate">
+      <%= link_to "How can we help you?", pages_contact_path,  class: 'btn-call-to-action sb' %>
     </div>
     </center>
   </div>
 </div>
 
+<%= link_to "How can we help you?", contact_path,  class: 'btn-call-to-action sb' %>
+
 
 <div class="grey">
   <center>
-    <h1>Who I'm building for in 2018</h1>
-    <div class="row" style="padding-top:40px">
-      <div class="col-md-6">
-      <%= image_tag "/partner1.png", class: 'partner' %>
-      </div>
-      <div class="col-md-6">
-      <%= image_tag "/partner2.png", class: 'partner' %>
-      </div>
-    </div>
-
-  <h1 style="padding-top: 50px">Recent projects</h1>
+  <h2 style="padding-top: 50px">Recent projects</h2>
     <div class="row padding-top">
       <% @projects.each do |project| %>
         <div class="col-sm-8 col-md-6 padding-top">

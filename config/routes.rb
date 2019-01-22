@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :urls
   resources :services
   resources :projects
+  get '/contact', to: 'pages#contact'
   root 'projects#index', to: 'projects/index'
   get 'pages/contact', to: 'pages#contact'
   get 'pages/privacy-policy', to: 'pages#privacypolicy'

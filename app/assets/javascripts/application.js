@@ -13,10 +13,21 @@
 //= require rails-ujs
 //= require activestorage
 //= require jquery
+//= require particles.min
+//= require app
+//= require main
+//= require aos
 //= require bootstrap-sprockets
 //= require bootstrap/modal
 //= require turbolinks
 //= require_tree .
+
+
+$().ready(function () {
+particlesJS.load('particles-js', 'assets/particles.json', function() {
+  console.log('callback - particles.js config loaded');
+})});
+
 
 var TxtType = function(el, toRotate, period) {
         this.toRotate = toRotate;
