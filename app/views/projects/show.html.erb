@@ -3,12 +3,12 @@
     <%= link_to "← Back", root_path, style: 'font-size: 16px;' %>
     <div class="row">
       <div class="col-xs-8 col-md-8"><br />
-        <%= image_tag @project.image.url(:project), style: 'box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);' if @project.image %>
+        <%= image_tag @project.image.url(:project), style: 'box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);' if @project.image? %> 
       </div>
       <div class="col-xs-4 col-md-4">
-        <h3 class="card-title"><%= @project.name %></h3>
+        <h3 class="card-title"><%= @project.name %></h3><br>
         
-        <%= link_to "Visit website", @project.website, target: :_blank, class: 'website' %>
+        <%= link_to "Website", @project.website, target: :_blank, class: 'website' %>
       </div>
 
     </div><br /><br />
@@ -22,12 +22,12 @@
     <div class="row">
       <div class="col-lg-9">
         <div class="card mt-4"><br /><br />
-          <%= image_tag @project.image.url(:project), style: 'box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);' if @project.image %>
+          <%= image_tag @project.image.url(:project), style: 'box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);' if @project.image? %>
           <div class="card-body">
             <center>
-              <h3 class="card-title"><%= @project.name %></h3>
+              <h3 class="card-title"><%= @project.name %></h3><br>
               <%= link_to "Website", @project.website, target: :_blank, class: 'website' %><br /><br /><br />
-             <strong>:<%= @project.intro %>"</strong><br />
+             <strong><%= @project.intro %></strong><br />
               <p class="card-text">
               	<%= simple_format @project.desciption %>
               </p>
