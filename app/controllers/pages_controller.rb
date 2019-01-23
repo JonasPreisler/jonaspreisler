@@ -1,5 +1,9 @@
 class PagesController < ApplicationController
 
+  def home
+    @projects = Project.all.limit(6)
+  end
+
   def contact
   end
   def messenger

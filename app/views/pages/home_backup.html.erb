@@ -1,65 +1,7 @@
-<script>
-  AOS.init();
-</script>
-
-<div class="header-2">
-  <div class="layer">
-    <div class="logo">
-      <center>
-        <h2 style="color: #fff">TEKUILA</h2>
-        <div class="logo-sub-home">digital agency</div>
-      </center>
-    </div>
-    <div class="headline padding-top">
-      <center>
-        <h1 style="color:#f3f2f2"><div style="padding-bottom: 10px;" data-aos="fade-up">We turn ideas into</div>
-          <div style="transform: rotate(3deg);" data-aos="fade-up">
-            <span style="background:linear-gradient(to right, #205faa, #167276);padding: 5px; border-radius: 3px;color:#f3f2f2;padding-left:15px;box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);">
-              digital products.
-            </span>
-          </div>
-        </h1>
-        <div class="sub-heading">
-           SaaS, Chatbots, Marketplaces, Ecommerce
-        </div>
-      </center>
-    </div>
-    <div id="particles-js"></div>
-  </div>
-</div>
-
-<div class="row header">
-  <% @projects.each do |f| %>
-    <%= link_to project_path(f), class: 'col-md-4 col-sx-3 col-sm-6' do %>
-      <div class="height:100vw">
-        <div class="featured" style="background-image: url('<%= f.image.url(:featured) %>');background-size: 100%">
-          <div class="headline" style="padding:3vw;padding-top: 10vw;" data-aos="fade-up" data-aos-duration="100">
-            <h2><%= f.name %></h2>
-             <p><%= f.desciption %></p> 
-          </div>
-        </div>
-      </div>
-    <% end %>
-  <% end %>
-</div>
-
-<div class="only-mobile flexbox">
-  <center>
-    <div class="padding-mobile headline-mobile">
-      You <span style="color:#f3992e">sell</span> it.<br /> I <span style="color:#f3992e">build</span> it. <br /><span style="font-size:18px;font-weight:300;"></span>
-    </div>
-  <div style="padding-bottom: 50px;" class="rotate">
-    <%= link_to "How can we help you?", pages_contact_path,  class: 'btn-call-to-action sb' %>
-  </div>
-  </center>
-</div>
-
-<%= link_to "How can we help you?", contact_path,  class: 'btn-call-to-action sb' %>
-
 
 <div class="grey">
   <center>
-    <h2 style="padding-top: 50px">Recent projects</h2>
+  <h2 style="padding-top: 50px">Recent projects</h2>
     <div class="row padding-top">
       <% @projects.each do |project| %>
         <div class="col-sm-8 col-md-6 padding-top">
@@ -135,7 +77,7 @@
   </div>
 
 
-  <div class="only-mobile page-title">
+  <div class="only-mobile page-title row">
     <div class="col-md-6 col-sx-6 col-sm-6">
       <center>
         <h1>Prepare your launch with <span style="color:#2e88f3;">confidence</span></h1>
@@ -164,5 +106,4 @@
       <%= link_to "Let's talk about your idea!", pages_contact_path, class: 'jp-nav btn btn-primary-mobile' %>
     </center>
   </div>
-</div>
 </div>

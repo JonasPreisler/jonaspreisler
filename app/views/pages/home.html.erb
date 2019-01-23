@@ -1,0 +1,79 @@
+<script>
+  AOS.init();
+</script>
+
+<div class="header-2">
+  <div class="layer">
+    <div class="logo">
+      <center>
+        <h2 style="color: #fff;text-decoration: underline;">TEKUILA</h2>
+        <div class="logo-sub-home">digital agency</div>
+      </center>
+    </div>
+    <div class="headline padding-top">
+      <center>
+        <h1 style="color:#f3f2f2"><div style="padding-bottom: 10px;" data-aos="fade-up">We code ideas into</div>
+          <div style="transform: rotate(3deg);" data-aos="fade-up">
+            <span style="background:linear-gradient(to right, #205faa, #167276);padding: 5px; border-radius: 3px;color:#f3f2f2;padding-left:15px;box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);">
+              digital products.
+            </span>
+          </div>
+        </h1>
+        <div class="sub-heading">
+           SaaS, Chatbots, Marketplaces, Ecommerce
+        </div>
+      </center>
+    </div>
+    <div id="particles-js"></div>
+  </div>
+</div>
+
+<div class="row projects">
+  <% @projects.each do |f| %>
+    <%= link_to project_path(f), class: 'col-md-4 col-sx-3 col-sm-6' do %>
+      <div class="height:100vw">
+        <div class="featured" style="background-image: url('<%= f.image.url(:featured) %>');background-size: 100%">
+          <div class="headline" style="padding:3vw;padding-top: 10vw;" data-aos="fade-up" data-aos-duration="100">
+            <h2><%= f.name %></h2>
+            <p><%= f.desciption %></p> 
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+<div style="background: #fff;padding:50px;">
+  <div class="row">
+    <div class="col-md-4">
+      We are 3 Ruby on Rails coders with X years of combined experience.<br><br>
+    </div>
+    <div class="col-md-8">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/SIqwHYIx5Vk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 5px;box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);"></iframe>
+    </div>
+  </div>
+</div>
+
+<div class="row projects">
+  <div class="col-md-4 col-sx-3 col-sm-6">
+    <%= image_tag('/jonas.jpg') %>
+    <br><br>
+    Jonas Preisler<br>
+    <i>Marketing, Development</i>
+  </div>
+  <div class="col-md-4 col-sx-3 col-sm-6">
+    <%= image_tag('/jonas.jpg') %>
+    <br><br>
+    Hristo Tenev<br>
+    <i>Development</i>
+  </div>
+  <div class="col-md-4 col-sx-3 col-sm-6">
+    <%= image_tag('/jonas.jpg') %>
+    <br><br>
+    Shalinga Mashane<br>
+    <i>Development</i>
+  </div>
+</div>
+
+<hr>
+<hr>

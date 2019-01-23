@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :services
   resources :projects
   get '/contact', to: 'pages#contact'
-  root 'projects#index', to: 'projects/index'
+  root 'pages#home', to: 'pages/home'
   get 'pages/contact', to: 'pages#contact'
   get 'pages/privacy-policy', to: 'pages#privacypolicy'
   get 'pages/terms-of-service', to: 'pages#termsofservice'
