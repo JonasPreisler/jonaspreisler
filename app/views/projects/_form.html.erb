@@ -22,8 +22,20 @@
   </div>
 
   <div class="field">
-    <%= form.label :image_900_x_400 %>
+    <%= form.label :image_733_x_418 %>
     <%= form.file_field :image %>
+  </div>
+  <div class="field">
+    <%= form.label :image_2 %>
+    <%= form.file_field :image_2 %>
+  </div>
+  <div class="field">
+    <%= form.label :image_3 %>
+    <%= form.file_field :image_3 %>
+  </div>
+  <div class="field">
+    <%= form.label :image_4 %>
+    <%= form.file_field :image_4 %>
   </div>
   <div class="field">
     <%= form.select :service_id,  Service.all.map{ |m| [m.name,m.id]}, {}, placeholder: "Service", class: "form-control" %>

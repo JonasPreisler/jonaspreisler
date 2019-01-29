@@ -18,6 +18,12 @@
     <br /><br />
     <strong><%= @project.intro %></strong><br><br>
     <%= simple_format @project.desciption %>
+    <br>
+    <center>
+    <%= image_tag @project.image_2.url(:project), style: 'box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);width: 100%;max-width: 733px;' if @project.image_2? %><br><br><br>
+    <%= image_tag @project.image_2.url(:project), style: 'box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);width: 100%;max-width: 733px;' if @project.image_3? %><br><br><br>
+    <%= image_tag @project.image_2.url(:project), style: 'box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);width: 100%;max-width: 733px;' if @project.image_4? %>
+  </center>
   </div>
 
 
@@ -32,10 +38,14 @@
               <h3 class="card-title"><%= @project.name %></h3><br>
               <%= link_to "Website", @project.website, target: :_blank, class: 'website' %><br /><br /><br />
             </center>
-             <strong style="font-size: 24px;"><%= @project.intro %></strong><br />
-              <p class="card-text">
-              	<%= simple_format @project.desciption %>
-              </p>
+            <strong style="font-size: 24px;"><%= @project.intro %></strong><br />
+            <p class="card-text">
+            	<%= simple_format @project.desciption %>
+            </p>
+            <br>
+            <%= image_tag @project.image_2.url(:project), style: 'box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);width: 100%;max-width: 733px;' if @project.image_2? %><br><br><br>
+            <%= image_tag @project.image_2.url(:project), style: 'box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);width: 100%;max-width: 733px;' if @project.image_3? %><br><br><br>
+            <%= image_tag @project.image_2.url(:project), style: 'box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);width: 100%;max-width: 733px;' if @project.image_4? %>
           </div>
         </div>
       </div>
