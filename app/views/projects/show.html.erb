@@ -3,7 +3,7 @@
     <%= link_to "← Back", root_path, style: 'font-size: 16px;' %>
     <div class="row">
       <div class="col-xs-8 col-md-8 desktop"><br />
-        <%= image_tag @project.image.url(:project), style: 'box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);' if @project.image? %> 
+        <%= image_tag @project.image_2.url(:project), style: 'box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);' if @project.image? %> 
       </div>
       <div class="mobile">
           <%= image_tag @project.image.url(:project), style: 'box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);' if @project.image? %> 
@@ -20,9 +20,8 @@
     <%= simple_format @project.desciption %>
     <br>
     <center>
-    <%= image_tag @project.image_2.url(:project), style: 'box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);width: 100%;max-width: 733px;' if @project.image_2? %><br><br><br>
-    <%= image_tag @project.image_2.url(:project), style: 'box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);width: 100%;max-width: 733px;' if @project.image_3? %><br><br><br>
-    <%= image_tag @project.image_2.url(:project), style: 'box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);width: 100%;max-width: 733px;' if @project.image_4? %>
+    <%= image_tag @project.image_3.url(:project), style: 'box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);width: 100%;max-width: 733px;' if @project.image_3? %><br><br><br>
+    <%= image_tag @project.image_4.url(:project), style: 'box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);width: 100%;max-width: 733px;' if @project.image_4? %>
   </center>
   </div>
 
@@ -43,9 +42,8 @@
             	<%= simple_format @project.desciption %>
             </p>
             <br>
-            <%= image_tag @project.image_2.url(:project), style: 'box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);width: 100%;max-width: 733px;' if @project.image_2? %><br><br><br>
-            <%= image_tag @project.image_2.url(:project), style: 'box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);width: 100%;max-width: 733px;' if @project.image_3? %><br><br><br>
-            <%= image_tag @project.image_2.url(:project), style: 'box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);width: 100%;max-width: 733px;' if @project.image_4? %>
+            <%= image_tag @project.image_3.url(:project), style: 'box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);width: 100%;max-width: 733px;' if @project.image_3? %><br><br><br>
+            <%= image_tag @project.image_4.url(:project), style: 'box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);width: 100%;max-width: 733px;' if @project.image_4? %>
           </div>
         </div>
       </div>
