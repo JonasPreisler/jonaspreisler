@@ -16,8 +16,10 @@
 
     </div>
     <br /><br />
-    <strong><%= @project.intro %></strong><br><br>
-    <%= simple_format @project.desciption %>
+    <div style='width: 50%;margin-left: 20vw;'>
+      <strong style="font-size: 28px;"><%= @project.intro %></strong><br><br>
+      <%= simple_format @project.desciption %>
+    </div>
     <br>
     <center>
     <%= image_tag @project.image_3.url(:project), style: 'box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);width: 100%;max-width: 733px;' if @project.image_3? %><br><br><br>
