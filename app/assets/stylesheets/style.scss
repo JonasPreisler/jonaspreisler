@@ -24,13 +24,7 @@ a { color: #1c1c1c !important; text-decoration: none !important; }
     filter: blur(0px);
     }
 }
-.project {
-  img {
-      width: 100%;
-      height: 100%;
-      border-radius: 10px;
-  }
-}
+
 .white-link {
     font-size: 20px;
     color: #1c1c1c;
@@ -228,10 +222,9 @@ a { color: #1c1c1c !important; text-decoration: none !important; }
   padding-top: 50px;
 }
 .headline-mobile {
-  font-size: 40px;
-  color: #f3f2f2;
-  font-weight: 700;
-  font-family: poppins bold, poppins;
+  h1 {
+    font-size: 50px;
+  }
 }
 .website {
   background: linear-gradient(to bottom right, #33b7b2, #337ab7);
@@ -289,9 +282,14 @@ a { color: #1c1c1c !important; text-decoration: none !important; }
 }
 
 .headline {
+  @media screen and (min-width: 600px) {
+    height: 35vw;
+  }
+  @media screen and (max-width: 600px) {
+    height: 60vw;
+  }
   color: #1c1c1c;
   transform: rotate(-1deg);
-  height: 40vw;
 }
 .header-image {
   position: relative;
@@ -403,8 +401,29 @@ text-align: center;
   bottom: 0;
 }
 
-.padding-top {
-  padding-top: 10vw;
+.projects {
+  .col-md-4 {
+  .headline {
+    padding-top: 10vw !important;
+  }
+  }
+  .col-sm-6 {
+  .headline {
+  padding-top: 15vw !important;
+  }
+  }
+  .col-xs-3 {
+  .headline {
+    padding-top: 22vw !important;
+    }
+  }
+}
+
+.overlay {
+    background: rgba(0,0,0,0.3);
+    overflow: hidden;
+    height: 100%;
+    z-index: 2;
 }
 /* ---------------------------------------------------
     END OF PROJECTS INDEX
@@ -416,10 +435,19 @@ text-align: center;
 ----------------------------------------------------- */
 
 .project {
+  img {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+  }
   background: #fff;
-  padding: 30px;
   border-radius: 5px;
-  margin: 30px;
+  @media screen and (min-width: 600px) {
+    padding: 30px;
+    margin: 30px;  
+  }
+  @media screen and (max-width: 600px) {
+  }
 }
 
 /* ---------------------------------------------------
@@ -456,9 +484,31 @@ text-align: center;
     END OF NAVBAR
 ----------------------------------------------------- */
 
-.overlay {
-    background: rgba(0,0,0,0.3);
-    overflow: hidden;
-    height: 100%;
-    z-index: 2;
+/* ---------------------------------------------------
+    GLOBAL
+----------------------------------------------------- */
+
+
+@media screen and (min-width: 600px) {
+  .mobile { display: none }
 }
+
+@media screen and (max-width: 600px) {
+  .desktop { display: none }
+}
+.hide_margin {
+  padding: 0;
+}
+
+
+.padding-top {
+  @media screen and (max-width: 600px) {
+    padding-top: 10vw;
+  }
+  @media screen and (max-width: 600px) {
+  padding-top: 20vw;
+  }
+}
+/* ---------------------------------------------------
+    END OF GLOBAL
+----------------------------------------------------- */

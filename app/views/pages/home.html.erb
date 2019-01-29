@@ -10,13 +10,27 @@
         <div class="logo-sub-home">digital agency</div>
       </center>
     </div>
-    <div class="headline padding-top">
+    <div class="headline padding-top desktop">
       <center>
-        <h1 style="color:#f3f2f2"><div style="padding-bottom: 10px;" data-aos="fade-up">We code ideas into</div>
+        <h1 style="color:#f3f2f2"><div style="padding-bottom: 10px;margin-top: 60px;" data-aos="fade-up">We code ideas into</div>
           <div style="transform: rotate(3deg);" data-aos="fade-up">
             <span style="background:linear-gradient(to right, #205faa, #167276);padding: 5px; border-radius: 3px;color:#f3f2f2;padding-left:15px;box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);">
               digital products.
             </span>
+          </div>
+        </h1>
+        <div class="sub-heading">
+           SaaS, Chatbots, Marketplaces, Ecommerce
+        </div>
+      </center>
+    </div>
+    <div class="headline-mobile padding-top mobile">
+      <center>
+        <h1 style="color:#f3f2f2"><div style="padding-bottom: 10px;transform: rotate(-1deg);" data-aos="fade-up">We code ideas into</div>
+          <div style="transform: rotate(3deg);" data-aos="fade-up">
+            <div style="background:linear-gradient(to right, #205faa, #167276);padding: 5px; border-radius: 3px;color:#f3f2f2;box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);">
+              digital <br>products
+            </div>
           </div>
         </h1>
         <div class="sub-heading">
@@ -34,7 +48,7 @@
       <div class="height:100vw">
         <div class="featured" style="background-image: url('<%= f.image.url(:featured) %>');background-size: 100%">
           <div class="overlay">
-            <div class="headline" style="padding:3vw;padding-top: 10vw;" data-aos="fade-up" data-aos-duration="100">
+            <div class="headline" style="padding:3vw;" data-aos="fade-up" data-aos-duration="100">
               <h2><%= f.name %></h2>
               <p><%= f.intro %></p> 
             </div>
@@ -45,17 +59,23 @@
   <% end %>
 </div>
 
-<div style="background: #fff;padding:50px;">
+<div style="background: #fff;">
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4" style="padding:50px;">
       We are 3 Ruby on Rails coders with X years of combined experience.<br><br>
     </div>
-    <div class="col-md-8">
+    <div class="col-md-8 desktop" style="padding:50px;">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/SIqwHYIx5Vk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 5px;box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);"></iframe>
+    </div>
+    <div class="mobile hide_margin"><br>
+      <div class="col-md-8">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/SIqwHYIx5Vk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 5px;box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);width: 100%;"></iframe>
+      </div><br>
     </div>
   </div>
 </div>
 
+<center class="padding"><h2 style="font-size: 40px;">The team</h2></center>
 <div class="row projects">
   <div class="col-md-4 col-sx-3 col-sm-6">
     <%= image_tag('/jonas.jpg') %>
