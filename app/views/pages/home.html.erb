@@ -1,45 +1,27 @@
 <script>
   AOS.init();
 </script>
-
-<div class="header-2">
-  <div class="layer">
-    <div class="logo">
-    <%= link_to "Contact", contact_path, class: 'contact' %>
-        <h2 style="color: #fff;text-decoration: underline;">TEKUILA</h2>
-        <div class="logo-sub-home">digital agency</div>
+<div style="background: linear-gradient(to bottom right, #00394c, #004c39);">
+  <center>
+    <h1 style="color: #fff;margin: 0;padding-top: 30px;">Reliable Web Development</h1>
+    <div class="desktop" style="padding:20px;width: 100% !important;">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/j18Bh3BVIwc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 5px;box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);"></iframe>
     </div>
-    <div class="headline padding-top desktop">
-      <center>
-        <h1 style="color:#f3f2f2"><div style="padding-bottom: 10px;margin-top: 60px;" data-aos="fade-up">We code ideas into</div>
-          <div style="transform: rotate(3deg);" data-aos="fade-up">
-            <span style="background:linear-gradient(to right, #205faa, #167276);padding: 5px; border-radius: 3px;color:#f3f2f2;padding-left:15px;box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);">
-              digital products.
-            </span>
-          </div>
-        </h1>
-        <div class="sub-heading">
-           SaaS, Chatbots, Marketplaces, Ecommerce
-        </div>
-      </center>
-    </div>
-    <div class="headline-mobile padding-top mobile">
-      <center>
-        <h1 style="color:#f3f2f2"><div style="padding-bottom: 10px;transform: rotate(-1deg);" data-aos="fade-up">We code ideas into</div>
-          <div style="transform: rotate(3deg);" data-aos="fade-up">
-            <div style="background:linear-gradient(to right, #205faa, #167276);padding: 5px; border-radius: 3px;color:#f3f2f2;box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);">
-              digital <br>products
-            </div>
-          </div>
-        </h1>
-        <div class="sub-heading">
-           SaaS, Chatbots, Marketplaces, Ecommerce
-        </div>
-      </center>
-    </div>
-    <div id="particles-js"></div>
+  </center>
+  <div class="mobile hide_margin"><br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/SIqwHYIx5Vk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 5px;box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);width: 100%;"></iframe>
   </div>
+  <br>
+
+  <div style="height: 120px">
+    <center data-aos="fade-up">
+      <span style="color: #fff;font-size: 24px;"> We turn ideas into <strong>digital products</strong></span>
+    </center>    
+  </div>
+<div id="particles-js" style="z-index: 1 !important"></div>
 </div>
+
+
 
 <div class="row projects">
   <% @projects.each do |f| %>
@@ -56,22 +38,6 @@
       </div>
     <% end %>
   <% end %>
-</div>
-
-<div style="background: #fff;">
-  <div class="row">
-    <div class="col-md-4" style="padding:50px;">
-      We are 3 Ruby on Rails coders with 12 years of combined experience.<br><br>
-    </div>
-    <div class="col-md-8 desktop" style="padding:50px;">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/SIqwHYIx5Vk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 5px;box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);"></iframe>
-    </div>
-    <div class="mobile hide_margin"><br>
-      <div class="col-md-8">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/SIqwHYIx5Vk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 5px;box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);width: 100%;"></iframe>
-      </div><br>
-    </div>
-  </div>
 </div>
 
 <center class="padding"><h2 style="font-size: 40px;">The team</h2></center>

@@ -253,6 +253,12 @@ a { color: #1c1c1c !important; text-decoration: none !important; }
      PROJECTS INDEX
 ----------------------------------------------------- */
 
+.vertical_center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); 
+}
+
 .rotate {
   transform: rotate(3deg);
 }
@@ -359,6 +365,28 @@ text-align: center;
 .header-2 {
   position: relative;
   background: url(/bg.jpg) no-repeat center center;
+  width:100%;
+  height:100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  .layer {
+    background: linear-gradient(to bottom right, rgba(170, 107, 32, 0.2), rgba(170, 38, 32, 0.6));
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .col-sm-6, .col-md-6 {
+    padding: 0;
+  }
+}
+.header-3 {
+  position: relative;
+  background: url(/bg6.jpg) no-repeat center center;
   width:100%;
   height:100%;
   -webkit-background-size: cover;
@@ -575,3 +603,4 @@ text-align: center;
 /* ---------------------------------------------------
     END OF GLOBAL
 ----------------------------------------------------- */
+
