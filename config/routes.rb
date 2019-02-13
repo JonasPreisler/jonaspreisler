@@ -3,8 +3,7 @@ Rails.application.routes.draw do
   resources :link_to_shortens
   resources :urls
   resources :services
-  resources :projects, except: :edit
-  get '/editthisshit', to: 'projects#edit'
+  resources :projects
   get '/contact', to: 'pages#contact'
   root 'pages#home', to: 'pages/home'
   get 'pages/contact', to: 'pages#contact'
