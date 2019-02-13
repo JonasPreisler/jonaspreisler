@@ -6,7 +6,7 @@
       <% if @project.embed %>
         <div class="desktop">
           <div style="padding:20px;width: 100% !important;">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/#{@project.embed}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 5px;box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);"></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @project.embed %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 5px;box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);"></iframe>
           </div>
         </div>
       <% end %><br>
@@ -38,7 +38,7 @@
 
             <h2 style="margin: 0;margin-bottom: 20px;padding-top: 20px;"><%= @project.name %></h2>
             <div style="width: 100% !important;padding-left: -15px !important;">
-              <iframe src="https://www.youtube.com/embed/#{@project.embed}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 5px;box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);"></iframe>
+              <iframe src="https://www.youtube.com/embed/<%= @project.embed %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 5px;box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);"></iframe>
             </div>
           </center><br><br>
           <div class="card-body">
