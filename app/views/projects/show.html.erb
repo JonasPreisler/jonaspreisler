@@ -15,6 +15,12 @@
       </div>
 
     </div>
+    <% if @project.embed %>
+      <div style="padding:20px;width: 100% !important;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/#{@project.embed}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 5px;box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);"></iframe>
+      </div>
+    <% end %>
+
     <br /><br />
     <div style='width: 50%;margin-left: 20vw;'>
       <strong style="font-size: 28px;"><%= @project.intro %></strong><br><br>
