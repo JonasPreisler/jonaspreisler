@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 
   def home
-    @projects = Project.all.order('featured DESC')
+    @projects = Project.all.order('featured ASC').limit(6)
   end
 
   def contact
