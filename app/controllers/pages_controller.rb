@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 
   def home
-    @projects = Project.all.limit(6)
+    @projects = Project.featured
   end
 
   def contact
