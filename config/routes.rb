@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :urls
   resources :services
   resources :projects
+  get '/dk', to: 'pages#dk'
   get '/contact', to: 'pages#contact'
   root 'pages#home', to: 'pages/home'
   get 'pages/contact', to: 'pages#contact'

@@ -1,0 +1,110 @@
+<script>
+  AOS.init();
+</script>
+
+<div style="background: linear-gradient(to bottom right, #00394c, #004c39);">
+  <%= link_to "Kontakt", contact_path, class: 'nav-top-button', style: 'float: right' %>
+  <div style="padding: 10px;" class="desktop">
+    <h2 style="color: #f3f2f2;font-size: 20px;">JONAS</h2>
+    <h2 style="color: #f3f2f2;font-size: 14px;">PREISLER</h2>
+  </div>
+  <div style="padding: 10px;" class="mobile">
+    <h2 style="color: #f3f2f2;font-size: 20px;">JONAS</h2>
+    <h2 style="color: #f3f2f2;font-size: 14px;">PREISLER</h2>
+  </div>
+  <center>
+    <div class="desktop">
+      <h1 style="color: #fff;margin: 0;padding-top: 30px;">Professionel Webudvikling</h1>
+      <div style="padding:20px;width: 100% !important;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/j18Bh3BVIwc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 5px;box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);"></iframe><br>
+        <span style="color: #c3c2c2;font-size: 12px;">(engelsk)</span>
+      </div>
+    </div>
+    <div class="mobile">
+      <h1 style="color: #fff;margin: 0;padding-top: 20px;font-size: 37px;">Professionel Webudvikling</h1>
+      <div style="padding:20px;width: 100% !important;">
+        <iframe src="https://www.youtube.com/embed/j18Bh3BVIwc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 5px;box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);"></iframe><br>
+        <span style="color: #c3c2c2;font-size: 12px;">(engelsk)</span>
+      </div>
+    </div>
+  </center>
+  <div style="height: 120px">
+    <center data-aos="fade-up">
+      <span style="color: #fff;font-size: 24px;"> Fra idé til <strong>digital produkt</strong></span>
+    </center>
+  </div>
+  <div id="particles-js" style="height: 30%;"></div>
+</div>
+
+
+
+<div class="row projects">
+  <% @projects.each do |f| %>
+    <%= link_to project_path(f), class: 'col-md-4 col-sx-3 col-sm-6' do %>
+      <div class="height:100vw">
+        <div class="featured" style="background-image: url('<%= f.image.url(:featured) %>');background-size: 100%">
+          <div class="overlay">
+            <div class="headline" style="padding:3vw;" data-aos="fade-up" data-aos-duration="100">
+              <h2><%= f.name %></h2>
+              <p><%= f.intro %></p> 
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+<div style="padding: 30px;padding-top:50px;">
+<h2 style="color: #00394c">Har du en idé som du vil lancere?</h2><br>
+
+Vi er et team af Ruby on Rails nørder som elsker at bygge nye projekter og få det på dine kunders skærm så hurtigt og problemsfrit som muligt.<br><br>
+
+De højkvalitets MVP'er vi udvikler er designed til skalering ved brug af bedste praksis, support og vedligeholdelse.<br><br>
+
+<strong>Processen vi følger:</strong><br>
+1. Vi tager et opkald på Skype eller Facebook hvor jeg lytter til hvad du har brug for.<br>
+2. Vi bliver enige om en plan.<br>
+3. Vi går i gang med arbejdet og sammen går vi appen igennem ca en gang om ugen.<br><br>
+
+<strong>Tekniske detaljer:</strong><br>
+Ruby on Rails, Javascript, Ubuntu, Capistrano, API integrationer med dine foretrukne betalings systemer softwares.<br><br>
+
+<strong>Produkter vi at udvikler:</strong><br>
+- SaaS produkter<br>
+- markedspladser<br>
+- chatbots<br>
+- lead generende websites 
+
+
+</div>
+<center class="padding"><h2 style="font-size: 40px;">Teamet</h2></center>
+<div class="row projects">
+  <div class="col-md-3 col-sx-3 col-sm-6">
+    <%= image_tag('/jonas.jpg') %>
+    <br><br>
+    <strong>Jonas Preisler</strong><br>
+    <i>Marketing, Udvikling</i>
+  </div>
+  <div class="col-md-3 col-sx-3 col-sm-6">
+    <%= image_tag('/hristo.jpg') %>
+    <br><br>
+    <strong>Hristo Tenev</strong><br>
+    <i>Backend Udvikling/API</i>
+  </div>
+  <div class="col-md-3 col-sx-3 col-sm-6">
+    <%= image_tag('/shalinga_m.jpg') %>
+    <br><br>
+    <strong>Shalinga Mashane</strong><br>
+    <i>Backend Udvikling</i>
+  </div>
+  <div class="col-md-3 col-sx-3 col-sm-6">
+    <%= image_tag('/bong.jpg') %>
+    <br><br>
+    <strong>Bong Aquino</strong><br>
+    <i>Server/deployment/AWS</i>
+  </div>
+</div>
+
+<br><br><br>
+  <center><%= link_to "Kontakt os", contact_path, class: 'contact_bottom' %></center>
+<br><br>
