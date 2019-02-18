@@ -38,7 +38,7 @@
         <div class="featured" style="background-image: url('<%= f.image.url(:featured) %>');background-size: 100%">
           <div class="overlay">
             <div class="headline" style="padding:3vw;" data-aos="fade-up" data-aos-duration="100">
-              <h2><%= f.name %></h2>
+              <h2><%= f.name %></h2><br>
               <p><%= f.intro %></p> 
             </div>
           </div>
@@ -46,6 +46,38 @@
       </div>
     <% end %>
   <% end %>
+</div>
+<div class="steps padding">
+  <h2><center>How we work:</center></h2><br>
+  <div class="row">
+    <div class="col-md-4 col-sm-4">
+          <center class="step padding" style="background: linear-gradient(to right, #004c39, #007f5f);">
+            <i class="fa fa-calendar-check-o" aria-hidden="true" style="font-size: 60px;"></i><br>
+            <span class="card-body">
+              <div class="h3 heading">WEEK 1</div>
+              <p style="font-size: 12px;letter-spacing: 0.1em;">PLANNING</p>
+            </span>
+          </center>
+    </div>
+    <div class="col-md-4 col-sm-4">
+          <center class="step padding" style="background: linear-gradient(to right, #007f5f, #004c39);">
+            <i class="fa fa-code" aria-hidden="true" style="font-size: 60px;"></i><br>
+            <span class="card-body">
+              <div class="h3 heading">WEEK 2-4</div>
+              <p style="font-size: 12px;letter-spacing: 0.1em;">DEVELOPMENT</p>
+            </span>
+          </center>
+    </div>
+    <div class="col-md-4 col-sm-4">
+          <center class="step padding" style="background: linear-gradient(to right, #004c39, #007f5f);">
+            <i class="fa fa-rocket" aria-hidden="true" style="font-size: 60px;"></i><br>
+            <span class="card-body">
+              <div class="h3">WEEK 5</div>
+              <p style="font-size: 12px;letter-spacing: 0.1em;">FINETUNING & DEPLOYMENT</p>
+            </span>
+          </center>
+    </div>
+  </div>
 </div>
 <div style="padding: 30px;padding-top:50px;">
 <h2 style="color: #00394c">Do you have an idea that you need to bring to market?</h2><br>
