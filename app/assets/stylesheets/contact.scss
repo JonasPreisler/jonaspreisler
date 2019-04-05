@@ -1,0 +1,38 @@
+.contact-page {
+	.header {
+		background: linear-gradient(to bottom right, #C40A87, #4A1083, #1c1c1c 50%);
+		.text {
+			transform: rotate(-1deg);
+			padding: 50px 0 0 0;
+		}
+		h2, h4 {
+			padding: 0 0 0 50px;
+			color: #f2f2f2 !important;
+			line-height: 1.4em;
+		}
+		img {
+			width: 100%
+		}
+	}
+	.text-box {
+		padding: 20px;
+		h3 {
+			font-weight: 300;
+		}
+		i {
+			position: absolute;
+		}
+		h4 {
+			margin-left: 40px;
+		}
+		.col-md-4, .col-sm-4, .col-md-8, .col-sm-8 {
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		}		
+	}
+	.booking-box {
+		overflow: scroll;
+		height: 500px;
+	}
+}
+

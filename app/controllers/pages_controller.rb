@@ -10,6 +10,8 @@ class PagesController < ApplicationController
 
   def contact
   end
+  def booking
+  end
   def messenger
     @project = Project.last
   end

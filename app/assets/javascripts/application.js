@@ -86,5 +86,3 @@ var TxtType = function(el, toRotate, period) {
         document.body.appendChild(css);
     };
 
-
-
