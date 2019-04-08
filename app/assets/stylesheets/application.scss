@@ -20,7 +20,7 @@
 
 
 body, p {
-    font-family: 'Helvetica Neue';
+    font-family: 'Gilroy light';
     src: url('HelveticaNeue-Roman.woff2') format('woff2'),
         url('HelveticaNeue-Roman.woff') format('woff'),
         url('HelveticaNeue-Roman.ttf') format('truetype');
@@ -37,12 +37,26 @@ body, p {
   font-size: 76px;
 }
 h1 {
-  font-family: 'Helvetica Neue Black' !important;
+  font-family: 'Gilroy bold' !important;
   font-size: 45px;
 }
 h2 {
   font-size: 30px;
-  font-family: 'Helvetica Neue Black' !important;
+  font-family: 'Gilroy bold' !important;
   color: #323232;
   margin: 0;
+}
+
+
+@font-face {
+    font-family: 'Gilroy light';
+    src: font-url('gilroy-light.otf') format('otf'),
+        font-url('gilroy-light-webfont.woff') format('woff'),
+        font-url('gilroy-light-webfont.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Gilroy bold';
+    src: font-url('gilroy-extrabold-webfont.otf') format('otf'),
+        font-url('gilroy-extrabold-webfont.woff') format('woff'),
+        font-url('gilroy-extrabold-webfont.woff2') format('woff2');
 }
