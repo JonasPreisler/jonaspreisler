@@ -21,4 +21,7 @@ Rails.application.routes.draw do
   end
   post "link_to_shorten/:id" => "urls#new", :via => [ :post]
 
+  mount Ckeditor::Engine => '/ckeditor'
+  resources :posts
+
 end

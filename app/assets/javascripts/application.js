@@ -16,6 +16,8 @@
 //= require particles.min
 //= require app
 //= require main
+//= require ckeditor/init
+//= require init_ckeditor
 //= require aos
 //= require bootstrap-sprockets
 //= require bootstrap/modal

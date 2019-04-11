@@ -28,7 +28,9 @@ gem 'mini_magick', '~> 4.8'
 gem 'pg'
 gem 'fog'
 gem 'omniauth-facebook'
-gem "koala"
+gem 'koala'
+gem 'ckeditor'
+gem 'friendly_id'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-particles.js'
