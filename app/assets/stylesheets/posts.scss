@@ -16,14 +16,16 @@
 }
 
 .post-show {
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 54%;
+  h1 {
+    background: linear-gradient(to right, #00394c, #007f5f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   @media (min-width: 644px) {
-    margin: 0 23% 0 23%;
+    margin: 80px 23% 0 23%;
+    width: 54%;
   }
   @media (max-width: 644px) {
-    margin: 0 5% 0 5%;
+    margin: 80px 5% 0 5%;
   }
 }
