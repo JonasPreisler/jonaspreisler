@@ -6,6 +6,16 @@
 	  <%= simple_format @post.content %>
 	</p>
 
+	<hr>
 
-	<%= link_to 'Back', posts_path %>
+	<div class="post-bottom">
+		<div class="author">
+			<%= image_tag('/jonas-black.jpg') %> <p>Jonas Preisler</p>
+		</div>
+		<div class="promotion">
+			<p>We build modern digital products. <br>Quickly and efficiently.</p>
+			<%= link_to 'Book a free call', booking_path %>
+		</div>
+	</div>
+a
 </div>

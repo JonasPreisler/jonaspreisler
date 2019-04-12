@@ -29,3 +29,39 @@
     margin: 80px 5% 0 5%;
   }
 }
+
+.post-bottom {
+  text-align: center;
+  .author {
+    img {
+    border-radius: 90px;
+    width: 100px;
+    }
+    p {
+      margin: 33px;
+    }
+    margin-bottom: 50px;
+  }
+  .promotion {
+    padding: 20px 20px 30px 20px;
+    color: #fff;
+    border-radius: 5px;
+    background: linear-gradient(to bottom right, #001f7f, #005f7f 30%, #007f5f 70%);
+    -moz-box-shadow:    0 15px 30px 0 rgba(0,0,0,.11),0 5px 15px 0 rgba(0,0,0,.08);
+    -webkit-box-shadow: 0 15px 30px 0 rgba(0,0,0,.11),0 5px 15px 0 rgba(0,0,0,.08);
+    box-shadow:         0 15px 30px 0 rgba(0,0,0,.11),0 5px 15px 0 rgba(0,0,0,.08);
+    p {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    a {
+      padding: 5px 20px 5px 20px;
+      border-radius: 3px;
+      background: #fff;
+      transition: .2s;
+      &:hover {
+        background: #dad9d9;
+      }
+    }
+  }
+}

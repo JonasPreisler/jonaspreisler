@@ -2,11 +2,15 @@
 	.header {
 		background: linear-gradient(to bottom right, #C40A87, #4A1083, #1c1c1c 50%);
 		.text {
-			transform: rotate(-1deg);
 			padding: 50px 0 0 0;
 		}
 		h2, h4 {
-			padding: 0 0 0 50px;
+			@media (min-width: 644px) {
+				padding: 0 30px 0 50px;
+			}
+			@media (max-width: 644px) {
+				padding: 0 30px 0 30px;
+			}
 			color: #f2f2f2 !important;
 			line-height: 1.4em;
 		}
