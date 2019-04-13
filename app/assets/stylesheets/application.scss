@@ -20,7 +20,7 @@
 
 
 body, p {
-    font-family: 'Gilroy light';
+    font-family: 'Gilroy regular';
     src: url('HelveticaNeue-Roman.woff2') format('woff2'),
         url('HelveticaNeue-Roman.woff') format('woff'),
         url('HelveticaNeue-Roman.ttf') format('truetype');
@@ -56,6 +56,13 @@ h5 {
     src: font-url('gilroy-light.otf') format('otf'),
         font-url('gilroy-light-webfont.woff') format('woff'),
         font-url('gilroy-light-webfont.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Gilroy regular';
+    src: font-url('gilroy-regular.otf') format('otf'),
+        font-url('gilroy-regular.woff') format('woff'),
+        font-url('gilroy-regular.woff2') format('woff2')
 }
 @font-face {
     font-family: 'Gilroy bold';
