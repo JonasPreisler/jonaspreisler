@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get '/ejendom', to: 'pages#ejendom'
   resources :urls, only: [:new, :create]
   get '/bitly', to: "urls#new"
+  get '/partnership', to: 'pages#partnership'
   namespace 'api', defaults: { format: :json } do
     resources :link_to_shortens
     resources :urls

@@ -22,4 +22,7 @@ class PagesController < ApplicationController
   def termsofservice
   end
 
+  def partnership
+  end
+
 end

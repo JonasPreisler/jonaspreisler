@@ -1,0 +1,88 @@
+.partnership {
+	.info-box {
+		background: #fff;
+		border-radius: 3px;
+		@media (min-width: 644px) {
+			padding: 20px 50px;
+			margin: 20px 60px;
+		}
+		@media (max-width: 644px) {
+			padding: 5px 10px;
+			margin: 20px 0;
+		}
+	  box-shadow: 0 2px 12px #999;
+	  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+	  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+	  &:hover {
+		  box-shadow: inset 0 3px 12px #999;
+	  }
+	}
+	.one {
+		border: 2px solid #00B285;
+		&:hover {
+			h3 {
+			color: #00B285;
+			}
+		}
+	}
+	.two {
+		border: 2px solid #0086b2;
+		&:hover {
+			h3 {
+			color: #0086b2;
+			}
+		}
+	}
+	.three {
+		border: 2px solid #002db2;
+		&:hover {
+			h3 {
+			color: #002db2;
+			}
+		}
+	}
+	p {
+		line-height: 1.8em;
+		margin: 0;
+	}
+	font-size: 18px;
+	.helping {
+		background: linear-gradient(to right, #00B285 0, #0086b2 100%);
+    color: #fff;
+    border-radius: 3px;
+    padding: 10px;
+    .text {
+	    padding: 45px 30px;
+    }
+    a {
+	    color: #fff !important;
+    }
+	}
+	.post-bottom {
+		width: 200px;
+	}
+	.author {
+		img {
+			border-radius: 90px;
+			width: 150px;
+			margin-top: 10px;
+		}
+		p { margin-top: 70px; }
+	}
+  h1 {
+    background: linear-gradient(to right, #00394c, #007f5f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 40px;
+  }
+  h2 {
+	  margin: 20px 0 20px 0;
+	  font-size: 30px;
+  }
+	@media (min-width: 644px) {
+		padding: 50px 80px 0 80px;
+	}
+	@media (max-width: 644px) {
+		padding-top: 30px;
+	}
+}
