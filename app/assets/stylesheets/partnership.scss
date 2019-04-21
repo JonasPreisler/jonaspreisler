@@ -1,4 +1,14 @@
 .partnership {
+	.first {
+		.col-md-6, col-sm-6 {
+		padding-left: 0;
+		}
+	}
+	.second {
+		.col-md-6, col-sm-6 {
+		padding-right: 0;
+		}
+	}
 	.info-box {
 		background: #fff;
 		border-radius: 3px;
@@ -44,10 +54,22 @@
 	}
 	font-size: 18px;
 	.helping {
-		background: linear-gradient(to right, #00B285 0, #0086b2 100%);
-    color: #fff;
+		background: linear-gradient(to right, #fff 0, #c3c2c2 100%);
+		border: 3px solid #ddd;
     border-radius: 3px;
     padding: 10px;
+    .text {
+	    padding: 45px 30px;
+	    .small-text {
+		    font-size: 12px;
+	    }
+    }
+   }
+	.button {
+		background: linear-gradient(to right, #0086B2 0, #002db2 100%);
+		border: 3px solid #ddd;
+    border-radius: 3px;
+    padding: 15px 35px;
     .text {
 	    padding: 45px 30px;
     }
@@ -56,7 +78,12 @@
     }
 	}
 	.post-bottom {
-		width: 200px;
+		@media (min-width: 644px) {
+			width: 350px;
+		}
+		@media (max-width: 644px) {
+			width: 250px;
+		}
 	}
 	.author {
 		img {
@@ -67,9 +94,6 @@
 		p { margin-top: 70px; }
 	}
   h1 {
-    background: linear-gradient(to right, #00394c, #007f5f);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     margin-bottom: 40px;
   }
   h2 {
@@ -81,5 +105,55 @@
 	}
 	@media (max-width: 644px) {
 		padding-top: 30px;
+	}
+	.col-md-4, .col-sm-4 {
+		padding: 0;
+		.box-outer-wrapper {
+			padding: 4px;
+			border-radius: 5px;
+			background: linear-gradient(to right, #0086b2 0, #00B285 100%);
+			margin: 10px;
+	    h2 {
+		    margin: 0;
+		    font-size: 26px;
+	    }
+	    .wow {
+		    background: #1c1c1c;
+		    padding: 20px;
+	    }
+			.box-wrapper {
+				background: #fff;
+		    border-radius: 3px;
+		    padding: 20px;
+		    width: 100%;
+		    cursor: pointer;
+		    position: relative;
+		    .box1 {
+			    position: absolute;
+			    line-height: 1.5em;
+			    padding-top: 10px;
+			    z-index: 100;
+					margin: 30px -150px 10px -150px;
+					border: 6px solid #ccc;
+					background: #fff;
+					padding: 20px;
+					border-radius: 5px;
+				  -moz-box-shadow:    0 15px 30px 0 rgba(0,0,0,.11),0 5px 15px 0 rgba(0,0,0,.08);
+				  -webkit-box-shadow: 0 15px 30px 0 rgba(0,0,0,.11),0 5px 15px 0 rgba(0,0,0,.08);
+				  box-shadow:         0 15px 30px 0 rgba(0,0,0,.11),0 5px 15px 0 rgba(0,0,0,.08);
+			    img {
+				    margin-bottom: 10px;
+			    }
+		    }
+		  }
+			.box2 {
+				background: linear-gradient(to right, #0086b2 60%, #002db2 100%);
+		    color: #fff;
+		    border-radius: 3px;
+		    padding: 20px;
+		    width: 100%;
+		    min-height: 300px;
+		  }
+		}
 	}
 }

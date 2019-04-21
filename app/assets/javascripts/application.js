@@ -31,6 +31,14 @@ particlesJS.load('particles-js', 'assets/particles.json', function() {
 })});
 
 
+$(document).ready(function() {
+    $(".box-wrapper").hover(
+      function() { $(this).children(".box1").show('medium'); },
+      function() { $(this).children(".box1").hide('medium'); }
+    );
+});
+
+
 var TxtType = function(el, toRotate, period) {
         this.toRotate = toRotate;
         this.el = el;
